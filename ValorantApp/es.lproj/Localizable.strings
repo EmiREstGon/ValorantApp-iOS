@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  ValorantApp
+
+  Created by Emilio Rafael Estévez González on 31/5/23.
+  
+*/
+
+// Títulos
+"AgentsTitle" = "Agentes";
+"WeaponsTitle" = "Armas";
+"MapsTitle" = "Mapas";
+"AbilitiesTitle" = "Habilidades";
+"StatsTitle" = "Estadísticas";
+
+    // Subtítulos
+    "TotalAgentsSubtitle" = "Total de agentes: ";
+    "TotalWeaponsSubtitle" = "Total de armas: ";
+    "FireRateSubtitle" = "Cadencia de tiro";
+    "MagazineSizeSubtitle" = "Capacidad del cargador";
+    "RunSpeedSubtitle" = "Multiplicador de velocidad";
+    "EquipTimeSubtitle" = "Tiempo de equipamiento";
+    "ReloadTimeSubtitle" = "Tiempo de recarga";
+    "FirstBulletSubtitle" = "Precisión de la 1ª bala";
+    "ShotgunPelletSubtitle" = "Recuento de perdigones";
+    "WallPenetrationSubtitle" = "Penetración de pared";
+
+    // Descripciones
+    "FireRateDescription" = "Es la frecuencia con la que un arma específica puede disparar o lanzar sus proyectiles. Esto puede verse afectado por varios factores, incluido el nivel de formación del operador, las limitaciones mecánicas, la disponibilidad de municiones y el estado del arma.";
+    "MagazineSizeDescription" = "Es la pieza rectangular que sostiene los proyectiles para introducirlos en la recámara del arma de fuego. Los cargadores de munición de alta capacidad, comúnmente definidos como aquellos capaces de contener más de 10 rondas, hacen que los disparos sean más letales. Cuantas más rondas pueda disparar un tirador sin recargar, más heridas pueden infligir.";
+    "RunSpeedDescription" = "Es la relación entre la velocidad de movimiento normal y la velocidad a la que se mueve un jugador mientras corre. Un multiplicador de velocidad más alto significa que el jugador se mueve más rápido, mientras que un multiplicador más bajo indica una velocidad de movimiento más lenta.";
+    "EquipTimeDescription" = "Es el tiempo necesario para sacar el arma de la funda. Representa el tiempo que tarda una persona entrenada en recuperar correctamente su arma de fuego de su posición segura y prepararla para su uso.";
+    "ReloadTimeDescription" = "Es el período necesario para que el personaje del jugador reemplace el cargador o cartucho vacío por uno completamente cargado, lo que le permite continuar disparando.";
+    "FirstBulletDescription" = "Es el nivel de precisión de un arma de fuego cuando dispara su tiro inicial después de apuntar o mientras pasa de un estado estacionario a un estado en movimiento. Un arma con alta precisión de la primera bala exhibirá una desviación mínima de la ubicación del objetivo previsto, lo que resultará en mayor fiabilidad y eficacia al enfrentarse a los oponentes.";
+    "ShotgunPelletDescription" = "Es el pequeño proyectil individual o un grupo de proyectiles que se descarga de una escopeta cuando se dispara. A diferencia de las armas de fuego tradicionales que disparan una sola bala, las escopetas dispersan varios perdigones simultáneamente, creando un patrón de dispersión que aumenta la probabilidad de alcanzar un objetivo a distancias cercanas a medias.";
+    "WallPenetrationDescription" = "Es la capacidad de un proyectil para atravesar barreras como paredes, puertas u otros obstáculos, manteniendo la fuerza suficiente para impactar potencialmente en un objetivo del otro lado.";
+
+    // URL
+    "ValorantURL" = "https://playvalorant.com/es-es/";
