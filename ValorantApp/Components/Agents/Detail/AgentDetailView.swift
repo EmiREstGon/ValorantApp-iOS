@@ -48,8 +48,7 @@ struct AgentDetailView: View {
                 .scrollIndicators(.hidden)
             }
         }
-        //.navigationTitle(agent.displayName)     // Navigation config
-        .background(Color("darkBlue")).opacity(0.975)
+        .background(Color("darkBlue"))
     }
 }
 

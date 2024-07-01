@@ -16,9 +16,7 @@ struct WeaponCategoryName: View {
         Text(weapon.shopData?.category.trimmingCharacters(in: .whitespacesAndNewlines) ?? "Melee")
             .font(.custom("VALORANT", size: 20))
             .fontWeight(.bold)
-            .padding(.leading, 5)
             .foregroundColor(Color("lightRed"))
-            .padding()
     }
 }
 

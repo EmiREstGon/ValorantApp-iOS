@@ -37,9 +37,8 @@ struct WeaponsMainView: View {
                     WeaponsList()   // Success
                 }
             }
-//            .navigationTitle(LocalizedStringKey("WeaponsTitle"))  // Navigation config
-            .background(Color("red"))
-            .padding(.bottom, 79)
+            .background(GradientBackgroundView(primaryColor: Color("darkBlue"), secondaryColor: Color("lightRed")))
+            .padding(.bottom, 74)
             .ignoresSafeArea(edges: .bottom)
         }
     }

@@ -13,27 +13,27 @@
 "AbilitiesTitle" = "Abilities";
 "StatsTitle" = "Stats";
 
-    // Subtitles
-    "TotalAgentsSubtitle" = "Total agents: ";
-    "TotalWeaponsSubtitle" = "Total weapons: ";
-    "FireRateSubtitle" = "Fire rate";
-    "MagazineSizeSubtitle" = "Magazine size";
-    "RunSpeedSubtitle" = "Run speed multiplier";
-    "EquipTimeSubtitle" = "Equip time";
-    "ReloadTimeSubtitle" = "Reload time";
-    "FirstBulletSubtitle" = "1st bullet accuracy";
-    "ShotgunPelletSubtitle" = "Shotgun pellet count";
-    "WallPenetrationSubtitle" = "Wall penetration";
+// Subtitles
+"TotalAgentsSubtitle" = "Total agents: ";
+"TotalWeaponsSubtitle" = "Total weapons: ";
+"FireRateSubtitle" = "Fire rate";
+"MagazineSizeSubtitle" = "Magazine size";
+"RunSpeedSubtitle" = "Run speed multiplier";
+"EquipTimeSubtitle" = "Equip time";
+"ReloadTimeSubtitle" = "Reload time";
+"FirstBulletSubtitle" = "1st bullet accuracy";
+"ShotgunPelletSubtitle" = "Shotgun pellet count";
+"WallPenetrationSubtitle" = "Wall penetration";
 
-    // Descriptions
-    "FireRateDescription" = "Is the frequency at which a specific weapon can fire or launch its projectiles. This can be influenced by several factors, including operator training level, mechanical limitations, ammunition availability, and weapon condition.";
-    "MagazineSizeDescription" = "Is the rectangular piece that holds shells for feeding into the firearm's chamber. High-capacity ammunition magazines, commonly defined as those capable of holding more than 10-rounds, make shootings more deadly. The more rounds a shooter can fire without reloading, the more wounds they can inflict.";
-    "RunSpeedDescription" = "Is the ratio between the normal movement speed and the speed at wich a player moves while running. A higher speed multiplier means that the player moves faster, while a lower multiplier indicates a slower movement speed.";
-    "EquipTimeDescription" = "Is the required time to pull your gun out from being holstered. It represents the duration it takes for a trained individual to successfully retrieve their firearm from its secured position and prepare it for use.";
-    "ReloadTimeDescription" = "Is the he period required for the player character to replace the empty magazine or cartridge with a fully loaded one, enabling them to resume firing.";
-    "FirstBulletDescription" = "Is the level of precision by a firearm when firing its initial shot after aiming or while transitioning from a stationary to a moving state. A weapon with high first bullet accuracy will exhibit minimal deviation from the intended target location, resulting in greater reliability and effectiveness when engaging opponents.";
-    "ShotgunPelletDescription" = "Is the small individual projectile or a cluster of projectiles that is discharged from a shotgun when fired. Unlike traditional firearms that fire a single bullet, shotguns disperse multiple pellets simultaneously, creating a spread pattern that increases the likelihood of hitting a target at close to medium ranges.";
-    "WallPenetrationDescription" = "Is the ability of a projectile to pass through barriers such as walls, doors, or other obstacles, maintaining enough force to potentially strike a target on the other side.";
+// Descriptions
+"FireRateDescription" = "Is the frequency at which a specific weapon can fire or launch its projectiles. This can be influenced by several factors, including operator training level, mechanical limitations, ammunition availability, and weapon condition.";
+"MagazineSizeDescription" = "Is the rectangular piece that holds shells for feeding into the firearm's chamber. High-capacity ammunition magazines, commonly defined as those capable of holding more than 10-rounds, make shootings more deadly. The more rounds a shooter can fire without reloading, the more wounds they can inflict.";
+"RunSpeedDescription" = "Is the ratio between the normal movement speed and the speed at wich a player moves while running. A higher speed multiplier means that the player moves faster, while a lower multiplier indicates a slower movement speed.";
+"EquipTimeDescription" = "Is the required time to pull your gun out from being holstered. It represents the duration it takes for a trained individual to successfully retrieve their firearm from its secured position and prepare it for use.";
+"ReloadTimeDescription" = "Is the he period required for the player character to replace the empty magazine or cartridge with a fully loaded one, enabling them to resume firing.";
+"FirstBulletDescription" = "Is the level of precision by a firearm when firing its initial shot after aiming or while transitioning from a stationary to a moving state. A weapon with high first bullet accuracy will exhibit minimal deviation from the intended target location, resulting in greater reliability and effectiveness when engaging opponents.";
+"ShotgunPelletDescription" = "Is the small individual projectile or a cluster of projectiles that is discharged from a shotgun when fired. Unlike traditional firearms that fire a single bullet, shotguns disperse multiple pellets simultaneously, creating a spread pattern that increases the likelihood of hitting a target at close to medium ranges.";
+"WallPenetrationDescription" = "Is the ability of a projectile to pass through barriers such as walls, doors, or other obstacles, maintaining enough force to potentially strike a target on the other side.";
 
-    // URL
-    "ValorantURL" = "https://playvalorant.com/en-us/";
+// URL
+"ValorantURL" = "https://playvalorant.com/en-us/";

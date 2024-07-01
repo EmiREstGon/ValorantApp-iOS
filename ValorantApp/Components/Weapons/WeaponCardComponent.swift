@@ -17,19 +17,25 @@ struct WeaponCardComponentView: View {
             VStack {
                 HStack {
                     VStack(alignment: .leading) {
-                        WeaponName(weapon: weapon)
-                            .padding(.bottom, -30)
-
-                        WeaponCategoryName(weapon: weapon)
+                        Spacer()
+                        
+                        HStack {
+                            WeaponCategoryName(weapon: weapon)
+                            
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            WeaponName(weapon: weapon)
+                            
+                            Spacer()
+                        }
                     }
-                    
-                    Spacer()
+                    .padding(.leading, -5)
+                    .frame(height: 115)
                 }
-                .padding(.leading, -30)
-                .padding(.top, 50)
-                .padding(.bottom, -30)
             }
-            .padding(35)
+            .padding(25)
             .background(
                 ZStack {
                     Color("darkBlue")

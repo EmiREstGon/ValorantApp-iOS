@@ -36,9 +36,8 @@ struct AgentsMainView: View {
                     AgentsList()    // Success
                 }
             }
-//            .navigationTitle(LocalizedStringKey("AgentsTitle"))  // Navigation config
-            .background(Color("red"))
-            .padding(.bottom, 79)
+            .background(GradientBackgroundView())
+            .padding(.bottom, 74)
             .ignoresSafeArea(edges: .bottom)
         }
     }

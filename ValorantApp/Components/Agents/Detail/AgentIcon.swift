@@ -18,7 +18,7 @@ struct AgentIcon: View {
                 .padding(.trailing, 185)
                 .shadow(radius: 5)
         } placeholder: {
-            CustomProgressView(color: .white)
+            CustomProgressView(color: Color("lightRed"))
                 .padding(.trailing, 185)
         }
     }

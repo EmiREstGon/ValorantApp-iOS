@@ -25,9 +25,40 @@ struct AgentCardComponentView: View {
                             VStack {
                                 Spacer()
                                 
-                                AgentName(agent: agent)
+                                HStack {
+                                    Spacer()
+                                    
+                                    HStack {
+                                        AsyncImage(url: URL(string: agent.role?.displayIcon ?? "")) { image in
+                                            image.resizable().scaledToFit()
+                                                .frame(width: 30)
+                                                .padding(.horizontal, 2.5)
+                                                .padding(.vertical, 7.5)
+                                        } placeholder: {
+                                            Spacer()
+                                            
+                                            CustomProgressView(color: .white, scale: 1.15)
+                                            
+                                            Spacer()
+                                        }
+                                    }
+                                    .frame(width: 35, height: 35)
+                                    .background(Color("red"))
+                                    .cornerRadius(10)
+                                    .shadow(color: Color("red"), radius: 5)
+                                    .padding(.trailing, -5)
+                                    .padding(.bottom, 2.5)
+                                }
+                                
+                                HStack {
+                                    Spacer()
+                                    
+                                    AgentName(agent: agent)
+                                        .padding(.trailing, -5)
+                                        .padding(.bottom, -20)
+                                }
                             }
-                            .frame(height: 100)
+                            .frame(height: 115)
                         }
                         
                         Spacer()

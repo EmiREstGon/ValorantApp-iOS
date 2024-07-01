@@ -20,13 +20,11 @@ struct WeaponIcon: View {
                 .padding()
                 .padding(.horizontal, 30)
                 .padding(.bottom, 30)
-                .shadow(color: Color("darkRed"), radius: 2, x: 8, y: 10)
+                .shadow(color: Color("darkRed"), radius: 2, x: 8, y: 9)
         } placeholder: {
-            ProgressView()
-                .tint(.white)
-                .scaleEffect(x: 1.5, y: 1.5)
+            CustomProgressView(color: Color("red"))
         }
-        .frame(maxHeight: 170)
+        .frame(maxHeight: 150)
     }
 }
 

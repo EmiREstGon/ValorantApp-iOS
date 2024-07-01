@@ -5,12 +5,6 @@
 //  Created by Emilio Rafael Estévez González on 24/5/23.
 //
 
-/*
-    BINDING <- STATE
- 
-    OBSERVEDOBJECT <- OBSERVABLEOBJECT, STATEOBJECT
-*/
-
 import SwiftUI
 
 struct ContentView: View {

@@ -11,16 +11,17 @@ struct CustomProgressView: View {
     
     // MARK: Variable
     var color: Color
+    var scale: Double = 1.5
     
     var body: some View {
         ProgressView()
             .tint(color)
-            .scaleEffect(x: 1.5, y: 1.5)
+            .scaleEffect(x: scale, y: scale)
     }
 }
 
 struct CustomProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomProgressView(color: Color("lightRed"))
+        CustomProgressView(color: Color("lightRed"), scale: 1.5)
     }
 }

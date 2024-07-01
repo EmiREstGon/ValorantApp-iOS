@@ -15,7 +15,6 @@ struct AgentName: View {
     var body: some View {
         Text(agent.displayName)
             .font(.custom("VALORANT", size: 28))
-            .padding(.leading)
             .foregroundColor(.white)
     }
 }

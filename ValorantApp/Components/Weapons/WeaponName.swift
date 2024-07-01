@@ -16,9 +16,8 @@ struct WeaponName: View {
         Text(weapon.displayName)
             .font(.custom("VALORANT", size: 28))
             .fontWeight(.bold)
-            .padding(.leading, 5)
+            .padding(.bottom, -10)
             .foregroundColor(.white)
-            .padding()
     }
 }
 
