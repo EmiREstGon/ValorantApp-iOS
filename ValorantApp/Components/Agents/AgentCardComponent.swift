@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct AgentCardComponentView: View {
     
@@ -13,6 +14,7 @@ struct AgentCardComponentView: View {
     @EnvironmentObject var data: UserData
     @State var isFavorite: Bool = false
     @Binding var agent: Agent
+    @StateObject private var loadingState = LoadingState()
     
     var body: some View {
         NavigationLink(destination: AgentDetailView(agent: $agent)) {
@@ -29,18 +31,15 @@ struct AgentCardComponentView: View {
                                     Spacer()
                                     
                                     HStack {
-                                        AsyncImage(url: URL(string: agent.role?.displayIcon ?? "")) { image in
-                                            image.resizable().scaledToFit()
-                                                .frame(width: 30)
-                                                .padding(.horizontal, 2.5)
-                                                .padding(.vertical, 7.5)
-                                        } placeholder: {
-                                            Spacer()
-                                            
-                                            CustomProgressView(color: .white, scale: 1.15)
-                                            
-                                            Spacer()
-                                        }
+                                        KFImage(URL(string: agent.role?.displayIcon ?? ""))
+                                            .placeholder {
+                                                CustomProgressView(color: .white, scale: 1)
+                                            }
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 30)
+                                            .padding(.horizontal, 2.5)
+                                            .padding(.vertical, 7.5)
                                     }
                                     .frame(width: 35, height: 35)
                                     .background(Color("red"))
@@ -67,19 +66,24 @@ struct AgentCardComponentView: View {
             }
             .padding(25)
             .background(
-                ZStack {    // Agent icon
+                ZStack {    // CustomProgressView
                     Color("darkBlue")
                     
-                    AgentIcon(agent: agent)
-                        .padding(.trailing, 185)
-                        .background(
-                            HStack {
-                                Spacer()
-                                
-                                AgentBackground(agent: agent)
-                                    .padding(.leading, 100)
-                            }
-                        )
+                    if !loadingState.allLoaded {
+                        CustomProgressView(color: Color("lightRed"))
+                    }
+                    
+                    ZStack {    // Agent icon & background
+                        AgentIcon(agent: agent, loadingState: loadingState)
+                            .padding(.trailing, 185)
+                            .background(
+                                HStack {
+                                    Spacer()
+                                    AgentBackground(agent: agent, loadingState: loadingState)
+                                        .padding(.leading, 100)
+                                }
+                            )
+                    }
                 }
             )
             .overlay(

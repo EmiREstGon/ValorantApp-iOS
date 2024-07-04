@@ -11,12 +11,13 @@ struct AgentDetailView: View {
     
     // MARK: Variable
     @Binding var agent: Agent
+    @StateObject private var loadingState = LoadingState()
     
     var body: some View {
         VStack {
             ScrollView {
                 ZStack {                        // Agent background and full portrait
-                    AgentBackground(agent: agent, isCard: false)
+                    AgentBackground(agent: agent, isCard: false, loadingState: loadingState)
                     
                     AgentFullPortrait(agent: agent)
                 }
