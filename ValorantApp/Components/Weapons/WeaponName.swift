@@ -14,7 +14,7 @@ struct WeaponName: View {
     
     var body: some View {
         Text(weapon.displayName)
-            .font(.custom("VALORANT", size: 28))
+            .font(.custom("VALORANT", size: 30))
             .fontWeight(.bold)
             .padding(.bottom, -10)
             .foregroundColor(.white)

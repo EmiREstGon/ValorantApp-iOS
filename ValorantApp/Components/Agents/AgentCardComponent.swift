@@ -71,6 +71,7 @@ struct AgentCardComponentView: View {
                     Color("darkBlue")
                     
                     AgentIcon(agent: agent)
+                        .padding(.trailing, 185)
                         .background(
                             HStack {
                                 Spacer()

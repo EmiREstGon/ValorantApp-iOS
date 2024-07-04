@@ -14,12 +14,10 @@ struct AgentIcon: View {
     
     var body: some View {
         AsyncImage(url: URL(string: agent.displayIcon)) { image in
-            image.resizable().scaledToFill().opacity(0.95)
-                .padding(.trailing, 185)
-                .shadow(radius: 5)
+            image.resizable().scaledToFill()
+                .shadow(color: Color("darkRed"), radius: 15)
         } placeholder: {
             CustomProgressView(color: Color("lightRed"))
-                .padding(.trailing, 185)
         }
     }
 }

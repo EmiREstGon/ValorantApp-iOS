@@ -20,12 +20,8 @@ struct AgentBackground: View {
                 .scaleEffect(isCard ? 1 : 1.25)
                 .padding(.trailing, isCard ? -15 : 0)
                 .colorMultiply(Color("red"))
-        } placeholder: {
-//            CustomProgressView(color: .white)
-//                .padding(.trailing, 25)
-//
-//            Spacer()
-        }
+                .shadow(color: Color("darkRed"), radius: 15)
+        } placeholder: {}
         .frame(maxHeight: 125)
     }
 }
