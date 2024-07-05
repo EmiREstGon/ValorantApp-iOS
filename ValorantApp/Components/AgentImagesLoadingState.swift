@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LoadingState: ObservableObject {
+class AgentImagesLoadingState: ObservableObject {
     @Published var agentIconLoading: Bool = true
     @Published var agentBackgroundLoading: Bool = true
 

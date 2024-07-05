@@ -12,7 +12,7 @@ struct AgentIcon: View {
     
     // MARK: Variables
     var agent: Agent
-        @ObservedObject var loadingState: LoadingState
+        @ObservedObject var loadingState: AgentImagesLoadingState
         
         var body: some View {
             KFImage(URL(string: agent.displayIcon))

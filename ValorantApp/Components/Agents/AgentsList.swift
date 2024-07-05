@@ -14,6 +14,7 @@ struct AgentsList: View {
     @State private var isLoading = false
     @State private var hasError = false
     private let valorantService = ValorantService()
+    private let skeletonImages = ["skeletonGekkoIcon", "skeletonFadeIcon", "skeletonBreachIcon", "skeletonDeadlockIcon"]
     private var totalAgents: Int {
         agents.count
     }
@@ -42,8 +43,14 @@ struct AgentsList: View {
             LazyVStack(spacing: -12) {
                 SectionTitleView(title: "AgentsTitle")
                 
-                ForEach($agents, id: \.uuid) { agent in
-                    AgentCardComponentView(agent: agent)
+                if isLoading {
+                    ForEach(0..<skeletonImages.count, id: \.self) { index in
+                        AgentSkeletonView(imageName: skeletonImages[index])
+                    }
+                } else {
+                    ForEach($agents, id: \.uuid) { agent in
+                        AgentCardComponentView(agent: agent)
+                    }
                 }
                 
                 SectionTotalView(title: "TotalAgentsSubtitle", total: totalAgents)

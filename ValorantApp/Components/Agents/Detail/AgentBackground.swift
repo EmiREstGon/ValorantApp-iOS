@@ -13,7 +13,7 @@ struct AgentBackground: View {
     // MARK: Variables
     var agent: Agent
     var isCard: Bool = true
-    @ObservedObject var loadingState: LoadingState
+    @ObservedObject var loadingState: AgentImagesLoadingState
         
         var body: some View {
             KFImage(URL(string: agent.background))

@@ -14,7 +14,7 @@ struct AgentCardComponentView: View {
     @EnvironmentObject var data: UserData
     @State var isFavorite: Bool = false
     @Binding var agent: Agent
-    @StateObject private var loadingState = LoadingState()
+    @StateObject private var loadingState = AgentImagesLoadingState()
     
     var body: some View {
         NavigationLink(destination: AgentDetailView(agent: $agent)) {

@@ -11,7 +11,7 @@ struct AgentDetailView: View {
     
     // MARK: Variable
     @Binding var agent: Agent
-    @StateObject private var loadingState = LoadingState()
+    @StateObject private var loadingState = AgentImagesLoadingState()
     
     var body: some View {
         VStack {
