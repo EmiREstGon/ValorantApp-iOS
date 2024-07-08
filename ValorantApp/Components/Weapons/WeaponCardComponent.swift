@@ -10,6 +10,8 @@ import SwiftUI
 struct WeaponCardComponentView: View {
     
     // MARK: Variables
+    @EnvironmentObject var data: UserData
+    @State var isFavorite: Bool = false
     var weapon: Weapon
     
     var body: some View {
@@ -42,11 +44,19 @@ struct WeaponCardComponentView: View {
                     WeaponIcon(isCardIcon: true, weapon: weapon)
                 }
             )
+            .overlay(
+                heartButton(weaponId: weapon.uuid, isFavorite: isFavorite, onFavoritePressed: data.onFavoriteWeaponPressed)
+                , alignment: .topTrailing)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, minHeight: 150)
             .cornerRadius(20)
             .padding()
             .shadow(radius: 5)
+        }
+        .onReceive(data.$favoriteWeapons) { favoriteWeapons in
+            isFavorite = favoriteWeapons.contains{ id in
+                weapon.uuid == id
+            }
         }
     }
 }

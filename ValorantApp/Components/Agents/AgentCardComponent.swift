@@ -70,9 +70,9 @@ struct AgentCardComponentView: View {
                 ZStack {    // CustomProgressView
                     Color("darkBlue")
                     
-//                    if !loadingState.allLoaded {
-//                        CustomProgressView(color: Color("lightRed"))
-//                    }
+                    //                    if !loadingState.allLoaded {
+                    //                        CustomProgressView(color: Color("lightRed"))
+                    //                    }
                     
                     ZStack {    // Agent icon & background
                         AgentIcon(agent: agent, loadingState: loadingState)
@@ -101,7 +101,7 @@ struct AgentCardComponentView: View {
             }
             .opacity(loadingState.allLoaded ? 1 : (isAnimating ? 0.8 : 1))
             .overlay(
-                heartButton(agentId: agent.uuid, isFavorite: isFavorite, onFavoritePressed: data.onFavoritePressed)
+                heartButton(agentId: agent.uuid, isFavorite: isFavorite, onFavoritePressed: data.onFavoriteAgentPressed)
                 , alignment: .topTrailing)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, minHeight: 150)
