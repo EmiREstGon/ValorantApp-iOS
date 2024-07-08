@@ -19,6 +19,5 @@ struct AgentDescription: View {
             .foregroundColor(.white)
             .padding()
             .padding(.top)
-            .padding(.horizontal, 25)
     }
 }

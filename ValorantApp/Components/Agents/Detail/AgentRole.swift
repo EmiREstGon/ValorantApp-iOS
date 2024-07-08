@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct AgentRole: View {
     
@@ -22,20 +23,19 @@ struct AgentRole: View {
                 .padding(.leading, 15)
                 .padding(.trailing, 10)
             
-            AsyncImage(url: URL(string: agent.role?.displayIcon ?? "")) { image in
-                image.resizable().scaledToFit()
-                    .frame(width: 35)
-                    .padding(.trailing, 15)
-            } placeholder: {
-                Spacer()
-                
-                ProgressView()
-                    .tint(.white)
-                    .padding()
-                    .scaleEffect(x: 1.5, y: 1.5)
-                
-                Spacer()
-            }
+            KFImage(URL(string: agent.role?.displayIcon ?? ""))
+                .placeholder {
+                    Spacer()
+                    ProgressView()
+                        .tint(.white)
+                        .padding()
+                        .scaleEffect(x: 1.5, y: 1.5)
+                    Spacer()
+                }
+                .resizable()
+                .scaledToFit()
+                .frame(width: 35)
+                .padding(.trailing, 15)
         }
         .frame(height: 60)
         .background(Color("red"))

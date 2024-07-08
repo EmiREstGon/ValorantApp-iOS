@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct AgentFullPortrait: View {
     
@@ -13,19 +14,13 @@ struct AgentFullPortrait: View {
     var agent: Agent
     
     var body: some View {
-        AsyncImage(url: URL(string: agent.fullPortrait)) { image in
-            image.resizable().scaledToFill()
-                .frame(height: 400)
-        } placeholder: {
-            Spacer()
-            
-            ProgressView()
-                .tint(.white)
-                .padding()
-                .scaleEffect(x: 1.5, y: 1.5)
-            
-            Spacer()
-        }
+        KFImage(URL(string: agent.fullPortrait))
+            .placeholder {
+                CustomProgressView(color: Color.white)
+            }
+            .resizable()
+            .scaledToFill()
+            .frame(maxHeight: 350)
     }
 }
 

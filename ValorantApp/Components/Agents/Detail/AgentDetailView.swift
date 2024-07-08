@@ -26,19 +26,13 @@ struct AgentDetailView: View {
                         .font(.custom("VALORANT", size: 44))
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
-                        .padding(.bottom, 424)
+                        .padding(.bottom, 420)
                 )
                 .padding(.top, 40)
                 
                 AgentRole(agent: agent)         // Agent role
                 
-                HStack {                        // Spacer() + Agent description + Spacer()
-                    Spacer()
-                    
-                    AgentDescription(agent: agent)
-                    
-                    Spacer()
-                }
+                AgentDescription(agent: agent)          // Agent description
                 
                 AgentAbilitiesTitle(agent: agent)           // Abilities title
                 

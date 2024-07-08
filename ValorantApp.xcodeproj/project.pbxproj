@@ -41,6 +41,7 @@
 		49C81A5A2C36D2F000D07C85 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 49C81A592C36D2F000D07C85 /* Kingfisher */; };
 		49C81A5E2C36FBE900D07C85 /* AgentImagesLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81A5D2C36FBE900D07C85 /* AgentImagesLoadingState.swift */; };
 		49C81A602C37EC3200D07C85 /* AgentSkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81A5F2C37EC3200D07C85 /* AgentSkeletonView.swift */; };
+		49C81A622C3BF2D000D07C85 /* AgentAbilityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81A612C3BF2D000D07C85 /* AgentAbilityDetailView.swift */; };
 		49CF65512A31C61A0043240E /* WeaponIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF65502A31C61A0043240E /* WeaponIcon.swift */; };
 		49CF65542A31CA3A0043240E /* WeaponStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF65532A31CA3A0043240E /* WeaponStat.swift */; };
 		49CF65562A31DE830043240E /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF65552A31DE830043240E /* ErrorText.swift */; };
@@ -118,6 +119,7 @@
 		49B558EB2A2793D3000FCF4A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		49C81A5D2C36FBE900D07C85 /* AgentImagesLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImagesLoadingState.swift; sourceTree = "<group>"; };
 		49C81A5F2C37EC3200D07C85 /* AgentSkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSkeletonView.swift; sourceTree = "<group>"; };
+		49C81A612C3BF2D000D07C85 /* AgentAbilityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAbilityDetailView.swift; sourceTree = "<group>"; };
 		49CF65502A31C61A0043240E /* WeaponIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponIcon.swift; sourceTree = "<group>"; };
 		49CF65532A31CA3A0043240E /* WeaponStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponStat.swift; sourceTree = "<group>"; };
 		49CF65552A31DE830043240E /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				49CF65632A321DAA0043240E /* AgentRole.swift */,
 				49B373CB2A33115500B2750D /* AgentAbilitiesTitle.swift */,
 				49B373CD2A33121900B2750D /* AgentAbilities.swift */,
+				49C81A612C3BF2D000D07C85 /* AgentAbilityDetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				499201E02C32D02F007588CA /* GradientBackgroundView.swift in Sources */,
 				49CF65642A321DAA0043240E /* AgentRole.swift in Sources */,
 				49B373C82A330ADC00B2750D /* AgentIcon.swift in Sources */,
+				49C81A622C3BF2D000D07C85 /* AgentAbilityDetailView.swift in Sources */,
 				499DB2532A3092840084D5D7 /* WeaponStatName.swift in Sources */,
 				499DB2552A30936A0084D5D7 /* WeaponStatsTitle.swift in Sources */,
 				49CF65542A31CA3A0043240E /* WeaponStat.swift in Sources */,

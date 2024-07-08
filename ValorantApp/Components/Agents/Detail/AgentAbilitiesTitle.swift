@@ -19,7 +19,7 @@ struct AgentAbilitiesTitle: View {
             .foregroundColor(Color("lightRed"))
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.top)
-            .padding(.leading, 50)
+            .padding(.leading, 25)
     }
 }
 

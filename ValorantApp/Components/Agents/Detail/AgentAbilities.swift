@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct AgentAbilities: View {
     // MARK: Variable
@@ -23,27 +24,26 @@ struct AgentAbilities: View {
                     selectedAbility = ability.wrappedValue
                     showingSheet = true
                 } label: {
-                    AsyncImage(url: URL(string: ability.displayIcon.wrappedValue ?? "")) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 40)
-                            .padding(.vertical, 12.5)
-                            .padding(.horizontal, 2.5)
-                    } placeholder: {
-                        if ability.displayIcon.wrappedValue != nil {
-                            ProgressView()
-                                .tint(.white)
-                                .padding()
-                                .scaleEffect(x: 1.5, y: 1.5)
-                        } else {
-                            Text(ability.displayName.wrappedValue)
-                                .font(.title3)
-                                .bold()
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
+                    KFImage(URL(string: ability.displayIcon.wrappedValue ?? ""))
+                        .placeholder {
+                            if ability.displayIcon.wrappedValue != nil {
+                                ProgressView()
+                                    .tint(.white)
+                                    .padding()
+                                    .scaleEffect(x: 1.5, y: 1.5)
+                            } else {
+                                Text(ability.displayName.wrappedValue)
+                                    .font(.title3)
+                                    .bold()
+                                    .foregroundColor(.white)
+                                    .multilineTextAlignment(.center)
+                            }
                         }
-                    }
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 40)
+                        .padding(.vertical, 12.5)
+                        .padding(.horizontal, 2.5)
                 }
                 .padding(.horizontal, 10)
                 .sheet(isPresented: $showingSheet) {
@@ -60,65 +60,9 @@ struct AgentAbilities: View {
             abilities = $agent.wrappedValue.abilities ?? []
         }
         .frame(minWidth: 200)
-        .padding(.vertical)
-        .padding(.horizontal, 50)
-    }
-}
-
-struct AbilityDetailView: View {
-    @Binding var ability: Ability
-    
-    var body: some View {
-        ZStack {
-            VStack {
-                AsyncImage(url: URL(string: ability.displayIcon ?? "")) { image in
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 65)
-                        .padding(.top, 25)
-                        .padding(.horizontal, 2.5)
-                        .colorMultiply(.white)
-                } placeholder: {
-                    if ability.displayIcon != nil {
-                        CustomProgressView(color: .white)
-                    } else {
-                        Text(ability.displayName)
-                            .font(.title)
-                            .bold()
-                            .foregroundColor(Color("lightRed"))
-                            .padding(.top, 35)
-                            .padding(.horizontal, 10)
-                    }
-                }
-                
-                if ability.displayIcon != nil {
-                    Text(ability.displayName)
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(Color("lightRed"))
-                        .padding(.horizontal, 10)
-                }
-                
-                Text(ability.description)
-                    .font(.title2)
-                    .padding(.horizontal, 25)
-                    .padding(.top, 10)
-                    .padding(.bottom, 25)
-            }
-            .foregroundColor(.white)
-            .frame(maxWidth: .infinity)
-            .background(Color("darkBlue"))
-            .cornerRadius(20)
-            .shadow(radius: 5)
-            .overlay {
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(.white, lineWidth: 3)
-            }
-        .padding()
-        }
-        .frame(maxHeight: .infinity)
-        .background(Color("red"))
+        .padding(.top, 7.5)
+        .padding(.horizontal, 20)
+        .padding(.bottom)
     }
 }
 
