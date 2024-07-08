@@ -15,6 +15,7 @@ struct AgentCardComponentView: View {
     @State var isFavorite: Bool = false
     @Binding var agent: Agent
     @StateObject private var loadingState = AgentImagesLoadingState()
+    @State private var isAnimating = false
     
     var body: some View {
         NavigationLink(destination: AgentDetailView(agent: $agent)) {
@@ -69,9 +70,9 @@ struct AgentCardComponentView: View {
                 ZStack {    // CustomProgressView
                     Color("darkBlue")
                     
-                    if !loadingState.allLoaded {
-                        CustomProgressView(color: Color("lightRed"))
-                    }
+//                    if !loadingState.allLoaded {
+//                        CustomProgressView(color: Color("lightRed"))
+//                    }
                     
                     ZStack {    // Agent icon & background
                         AgentIcon(agent: agent, loadingState: loadingState)
@@ -86,6 +87,19 @@ struct AgentCardComponentView: View {
                     }
                 }
             )
+            .onChange(of: loadingState.allLoaded) { newValue in
+                if newValue {
+                    isAnimating = false
+                }
+            }
+            .onAppear {
+                if !loadingState.allLoaded {
+                    withAnimation(Animation.linear(duration: 0.5).repeatForever(autoreverses: true)) {
+                        isAnimating.toggle()
+                    }
+                }
+            }
+            .opacity(loadingState.allLoaded ? 1 : (isAnimating ? 0.8 : 1))
             .overlay(
                 heartButton()
                 , alignment: .topTrailing)
