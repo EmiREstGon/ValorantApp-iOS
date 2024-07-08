@@ -34,14 +34,14 @@ struct AgentRole: View {
                 }
                 .resizable()
                 .scaledToFit()
-                .frame(width: 35)
+                .frame(width: 30)
                 .padding(.trailing, 15)
         }
         .frame(height: 60)
-        .background(Color("red"))
+        .background(assignRoleColor(for: agent.role?.displayName ?? ""))
         .cornerRadius(15)
         .padding(.top, 25)
-        .shadow(color: Color("red"), radius: 5)
+        .shadow(color: assignRoleColor(for: agent.role?.displayName ?? ""), radius: 5)
     }
 }
 

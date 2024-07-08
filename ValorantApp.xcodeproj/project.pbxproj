@@ -42,6 +42,8 @@
 		49C81A5E2C36FBE900D07C85 /* AgentImagesLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81A5D2C36FBE900D07C85 /* AgentImagesLoadingState.swift */; };
 		49C81A602C37EC3200D07C85 /* AgentSkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81A5F2C37EC3200D07C85 /* AgentSkeletonView.swift */; };
 		49C81A622C3BF2D000D07C85 /* AgentAbilityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81A612C3BF2D000D07C85 /* AgentAbilityDetailView.swift */; };
+		49C81A642C3C3A9200D07C85 /* HeartButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81A632C3C3A9200D07C85 /* HeartButtonComponent.swift */; };
+		49C81A662C3C3CA600D07C85 /* AssignRoleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81A652C3C3CA600D07C85 /* AssignRoleColor.swift */; };
 		49CF65512A31C61A0043240E /* WeaponIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF65502A31C61A0043240E /* WeaponIcon.swift */; };
 		49CF65542A31CA3A0043240E /* WeaponStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF65532A31CA3A0043240E /* WeaponStat.swift */; };
 		49CF65562A31DE830043240E /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF65552A31DE830043240E /* ErrorText.swift */; };
@@ -120,6 +122,8 @@
 		49C81A5D2C36FBE900D07C85 /* AgentImagesLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentImagesLoadingState.swift; sourceTree = "<group>"; };
 		49C81A5F2C37EC3200D07C85 /* AgentSkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSkeletonView.swift; sourceTree = "<group>"; };
 		49C81A612C3BF2D000D07C85 /* AgentAbilityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAbilityDetailView.swift; sourceTree = "<group>"; };
+		49C81A632C3C3A9200D07C85 /* HeartButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButtonComponent.swift; sourceTree = "<group>"; };
+		49C81A652C3C3CA600D07C85 /* AssignRoleColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignRoleColor.swift; sourceTree = "<group>"; };
 		49CF65502A31C61A0043240E /* WeaponIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponIcon.swift; sourceTree = "<group>"; };
 		49CF65532A31CA3A0043240E /* WeaponStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponStat.swift; sourceTree = "<group>"; };
 		49CF65552A31DE830043240E /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 				49CF65572A31DF4A0043240E /* CustomProgressView.swift */,
 				49CF65552A31DE830043240E /* ErrorText.swift */,
 				499201DF2C32D02F007588CA /* GradientBackgroundView.swift */,
+				49C81A632C3C3A9200D07C85 /* HeartButtonComponent.swift */,
 				49D557182AA9FA5900C9C6A2 /* SectionLogoView.swift */,
 				49D557142AA9E4E400C9C6A2 /* SectionTitleView.swift */,
 				49D557162AA9E89E00C9C6A2 /* SectionTotalView.swift */,
@@ -345,6 +350,7 @@
 				49CF655D2A31E5A00043240E /* AgentsList.swift */,
 				49A3BC482A1F660E00B5C125 /* AgentCardComponent.swift */,
 				49C81A5F2C37EC3200D07C85 /* AgentSkeletonView.swift */,
+				49C81A652C3C3CA600D07C85 /* AssignRoleColor.swift */,
 				49CF65662A3220A50043240E /* Detail */,
 			);
 			path = Agents;
@@ -509,7 +515,9 @@
 				49B373C82A330ADC00B2750D /* AgentIcon.swift in Sources */,
 				49C81A622C3BF2D000D07C85 /* AgentAbilityDetailView.swift in Sources */,
 				499DB2532A3092840084D5D7 /* WeaponStatName.swift in Sources */,
+				49C81A642C3C3A9200D07C85 /* HeartButtonComponent.swift in Sources */,
 				499DB2552A30936A0084D5D7 /* WeaponStatsTitle.swift in Sources */,
+				49C81A662C3C3CA600D07C85 /* AssignRoleColor.swift in Sources */,
 				49CF65542A31CA3A0043240E /* WeaponStat.swift in Sources */,
 				49D1D44E2A1E6CEA001100DA /* ValorantService.swift in Sources */,
 				49E57E552A20AB8F00B6F3DB /* Ability.swift in Sources */,

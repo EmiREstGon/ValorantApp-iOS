@@ -43,9 +43,9 @@ struct AgentCardComponentView: View {
                                             .padding(.vertical, 7.5)
                                     }
                                     .frame(width: 35, height: 35)
-                                    .background(Color("red"))
+                                    .background(assignRoleColor(for: agent.role?.displayName ?? ""))
                                     .cornerRadius(10)
-                                    .shadow(color: Color("red"), radius: 5)
+                                    .shadow(color: assignRoleColor(for: agent.role?.displayName ?? ""), radius: 5)
                                     .padding(.trailing, -5)
                                     .padding(.bottom, 2.5)
                                 }
@@ -101,7 +101,7 @@ struct AgentCardComponentView: View {
             }
             .opacity(loadingState.allLoaded ? 1 : (isAnimating ? 0.8 : 1))
             .overlay(
-                heartButton()
+                heartButton(agentId: agent.uuid, isFavorite: isFavorite, onFavoritePressed: data.onFavoritePressed)
                 , alignment: .topTrailing)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, minHeight: 150)
@@ -114,19 +114,6 @@ struct AgentCardComponentView: View {
                 agent.uuid == id
             }
         }
-    }
-    
-    // MARK: Heart Button view
-    func heartButton() -> some View {
-        Button {
-            data.onFavoritePressed(agentId: agent.uuid, isFavorite: isFavorite)
-            isFavorite.toggle()
-        } label: {
-            Image(systemName: isFavorite ? "heart.fill" : "heart")
-                .foregroundColor(isFavorite ? Color("lightRed") : .white)
-                .font(.system(size: 35))
-        }
-            .padding()
     }
 }
 
