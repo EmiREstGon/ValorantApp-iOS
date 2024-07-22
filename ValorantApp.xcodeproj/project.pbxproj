@@ -28,6 +28,8 @@
 		499DB2512A3091780084D5D7 /* WeaponStatDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DB2502A3091780084D5D7 /* WeaponStatDescription.swift */; };
 		499DB2532A3092840084D5D7 /* WeaponStatName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DB2522A3092840084D5D7 /* WeaponStatName.swift */; };
 		499DB2552A30936A0084D5D7 /* WeaponStatsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DB2542A30936A0084D5D7 /* WeaponStatsTitle.swift */; };
+		49A122152C4E8D2500496271 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A122142C4E8D2500496271 /* SplashScreenView.swift */; };
+		49A122172C4E960200496271 /* valorantSplash.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 49A122162C4E960200496271 /* valorantSplash.mp4 */; };
 		49A3BC472A1F5ABA00B5C125 /* AgentsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3BC462A1F5ABA00B5C125 /* AgentsMainView.swift */; };
 		49A3BC492A1F660E00B5C125 /* AgentCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3BC482A1F660E00B5C125 /* AgentCardComponent.swift */; };
 		49A3BC4B2A1F75A000B5C125 /* AgentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3BC4A2A1F75A000B5C125 /* AgentDetailView.swift */; };
@@ -108,6 +110,8 @@
 		499DB2502A3091780084D5D7 /* WeaponStatDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponStatDescription.swift; sourceTree = "<group>"; };
 		499DB2522A3092840084D5D7 /* WeaponStatName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponStatName.swift; sourceTree = "<group>"; };
 		499DB2542A30936A0084D5D7 /* WeaponStatsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponStatsTitle.swift; sourceTree = "<group>"; };
+		49A122142C4E8D2500496271 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		49A122162C4E960200496271 /* valorantSplash.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = valorantSplash.mp4; path = ../../../../Downloads/Valorant/valorantSplash.mp4; sourceTree = "<group>"; };
 		49A3BC462A1F5ABA00B5C125 /* AgentsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsMainView.swift; sourceTree = "<group>"; };
 		49A3BC482A1F660E00B5C125 /* AgentCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentCardComponent.swift; sourceTree = "<group>"; };
 		49A3BC4A2A1F75A000B5C125 /* AgentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDetailView.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				49D557182AA9FA5900C9C6A2 /* SectionLogoView.swift */,
 				49D557142AA9E4E400C9C6A2 /* SectionTitleView.swift */,
 				49D557162AA9E89E00C9C6A2 /* SectionTotalView.swift */,
+				49A122142C4E8D2500496271 /* SplashScreenView.swift */,
 				49E57E532A209C0B00B6F3DB /* Agents */,
 				49071D642A24FCFF001E172A /* Weapons */,
 			);
@@ -242,6 +247,7 @@
 				49D1D4492A1E6B80001100DA /* Models */,
 				49D1D44A2A1E6B8A001100DA /* Services */,
 				49977F2A2A1E001E00AC2CE0 /* ValorantAppApp.swift */,
+				49A122162C4E960200496271 /* valorantSplash.mp4 */,
 				49977F2E2A1E001F00AC2CE0 /* Assets.xcassets */,
 				49977F302A1E001F00AC2CE0 /* Preview Content */,
 				49071D5A2A248D9C001E172A /* UserSettings.swift */,
@@ -469,6 +475,7 @@
 			files = (
 				49977F322A1E001F00AC2CE0 /* Preview Assets.xcassets in Resources */,
 				49B558E72A27567A000FCF4A /* Localizable.strings in Resources */,
+				49A122172C4E960200496271 /* valorantSplash.mp4 in Resources */,
 				49977F2F2A1E001F00AC2CE0 /* Assets.xcassets in Resources */,
 				4915A9F22A2886A40041178E /* valorantFont.ttf in Resources */,
 			);
@@ -523,6 +530,7 @@
 				49E57E552A20AB8F00B6F3DB /* Ability.swift in Sources */,
 				49B373CC2A33115500B2750D /* AgentAbilitiesTitle.swift in Sources */,
 				49CF65682A3221140043240E /* AgentDescription.swift in Sources */,
+				49A122152C4E8D2500496271 /* SplashScreenView.swift in Sources */,
 				49CF655C2A31E45D0043240E /* WeaponName.swift in Sources */,
 				49A3BC472A1F5ABA00B5C125 /* AgentsMainView.swift in Sources */,
 				49A3BC492A1F660E00B5C125 /* AgentCardComponent.swift in Sources */,

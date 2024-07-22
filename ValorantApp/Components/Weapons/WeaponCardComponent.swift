@@ -34,7 +34,7 @@ struct WeaponCardComponentView: View {
                         }
                     }
                     .padding(.leading, -5)
-                    .frame(height: 115)
+                    .frame(height: 123)
                 }
             }
             .padding(25)

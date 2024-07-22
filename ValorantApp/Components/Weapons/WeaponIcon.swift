@@ -15,11 +15,10 @@ struct WeaponIcon: View {
     
     var body: some View {
         AsyncImage(url: URL(string: weapon.displayIcon ?? "")) { image in
-            image.resizable().scaledToFit().opacity(1)
-                .scaleEffect(isCardIcon ? 1 : 1.35)
+            image.resizable().scaledToFit()
+                .scaleEffect(isCardIcon ? 1 : 1.25)
                 .padding()
                 .padding(.horizontal, 30)
-                .padding(.bottom, 30)
                 .shadow(color: Color("darkRed"), radius: 2, x: 8, y: 9)
         } placeholder: {
             CustomProgressView(color: Color("red"))

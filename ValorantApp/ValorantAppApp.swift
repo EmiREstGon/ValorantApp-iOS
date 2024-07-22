@@ -11,7 +11,7 @@ import SwiftUI
 struct ValorantAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
     }
 }

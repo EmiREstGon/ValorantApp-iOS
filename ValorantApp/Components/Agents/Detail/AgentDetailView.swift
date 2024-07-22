@@ -26,7 +26,7 @@ struct AgentDetailView: View {
                         .font(.custom("VALORANT", size: 44))
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
-                        .padding(.bottom, 420)
+                        .padding(.bottom, 400)
                 )
                 .padding(.top, 40)
                 
