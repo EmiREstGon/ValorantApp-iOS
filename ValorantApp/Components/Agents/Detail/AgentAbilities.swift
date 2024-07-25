@@ -16,7 +16,6 @@ struct AgentAbilities: View {
     @State var selectedAbility: Ability = .init(displayName: "", description: "")
     @State var abilities: [Ability] = []
 
-    
     var body: some View {
         HStack {
             ForEach($abilities, id: \.displayName) { ability in
@@ -24,30 +23,15 @@ struct AgentAbilities: View {
                     selectedAbility = ability.wrappedValue
                     showingSheet = true
                 } label: {
-                    KFImage(URL(string: ability.displayIcon.wrappedValue ?? ""))
-                        .placeholder {
-                            if ability.displayIcon.wrappedValue != nil {
-                                ProgressView()
-                                    .tint(.white)
-                                    .padding()
-                                    .scaleEffect(x: 1.5, y: 1.5)
-                            } else {
-                                Text(ability.displayName.wrappedValue)
-                                    .font(.title3)
-                                    .bold()
-                                    .foregroundColor(.white)
-                                    .multilineTextAlignment(.center)
-                            }
-                        }
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 40)
-                        .padding(.vertical, 12.5)
-                        .padding(.horizontal, 2.5)
+                    if let iconURL = ability.displayIcon.wrappedValue, !iconURL.isEmpty {
+                        makeIconAgentAbility(url: iconURL)
+                    } else {
+                        makeTextAgentAbility(name: ability.displayName.wrappedValue)
+                    }
                 }
                 .padding(.horizontal, 10)
                 .sheet(isPresented: $showingSheet) {
-                        AbilityDetailView(ability: $selectedAbility)
+                    AbilityDetailView(ability: $selectedAbility)
                 }
                 .background(Color("red"))
                 .cornerRadius(15)
@@ -56,13 +40,39 @@ struct AgentAbilities: View {
                 .shadow(color: Color("red"), radius: 5)
             }
         }
-        .onAppear{
+        .onAppear {
             abilities = $agent.wrappedValue.abilities ?? []
         }
         .frame(minWidth: 200)
         .padding(.top, 7.5)
         .padding(.horizontal, 20)
         .padding(.bottom)
+    }
+    
+    func makeIconAgentAbility(url: String) -> some View {
+        KFImage(URL(string: url))
+            .placeholder {
+                ProgressView()
+                    .tint(.white)
+                    .padding()
+                    .scaleEffect(x: 1.5, y: 1.5)
+            }
+            .resizable()
+            .scaledToFit()
+            .frame(height: 40)
+            .padding(.vertical, 12.5)
+            .padding(.horizontal, 2.5)
+    }
+    
+    func makeTextAgentAbility(name: String) -> some View {
+        Text(name)
+            .font(.title3)
+            .bold()
+            .foregroundColor(.white)
+            .multilineTextAlignment(.center)
+            .frame(height: 40)
+            .padding(.vertical, 12.5)
+            .padding(.horizontal, 2.5)
     }
 }
 

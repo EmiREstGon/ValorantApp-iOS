@@ -30,6 +30,10 @@
 		499DB2552A30936A0084D5D7 /* WeaponStatsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DB2542A30936A0084D5D7 /* WeaponStatsTitle.swift */; };
 		49A122152C4E8D2500496271 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A122142C4E8D2500496271 /* SplashScreenView.swift */; };
 		49A122172C4E960200496271 /* valorantSplash.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 49A122162C4E960200496271 /* valorantSplash.mp4 */; };
+		49A1221D2C4EDBD300496271 /* introSova.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 49A1221C2C4EDBD300496271 /* introSova.mp4 */; };
+		49A1221F2C4EDCB800496271 /* AgentIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1221E2C4EDCB800496271 /* AgentIntroView.swift */; };
+		49A122222C50E42100496271 /* SectionEndList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A122212C50E42100496271 /* SectionEndList.swift */; };
+		49A122252C527E1500496271 /* CustomConnectionErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A122242C527E1500496271 /* CustomConnectionErrorView.swift */; };
 		49A3BC472A1F5ABA00B5C125 /* AgentsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3BC462A1F5ABA00B5C125 /* AgentsMainView.swift */; };
 		49A3BC492A1F660E00B5C125 /* AgentCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3BC482A1F660E00B5C125 /* AgentCardComponent.swift */; };
 		49A3BC4B2A1F75A000B5C125 /* AgentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3BC4A2A1F75A000B5C125 /* AgentDetailView.swift */; };
@@ -112,6 +116,10 @@
 		499DB2542A30936A0084D5D7 /* WeaponStatsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponStatsTitle.swift; sourceTree = "<group>"; };
 		49A122142C4E8D2500496271 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		49A122162C4E960200496271 /* valorantSplash.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = valorantSplash.mp4; path = ../../../../Downloads/Valorant/valorantSplash.mp4; sourceTree = "<group>"; };
+		49A1221C2C4EDBD300496271 /* introSova.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = introSova.mp4; path = ../../../../Downloads/Valorant/introSova.mp4; sourceTree = "<group>"; };
+		49A1221E2C4EDCB800496271 /* AgentIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentIntroView.swift; sourceTree = "<group>"; };
+		49A122212C50E42100496271 /* SectionEndList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionEndList.swift; sourceTree = "<group>"; };
+		49A122242C527E1500496271 /* CustomConnectionErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConnectionErrorView.swift; sourceTree = "<group>"; };
 		49A3BC462A1F5ABA00B5C125 /* AgentsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsMainView.swift; sourceTree = "<group>"; };
 		49A3BC482A1F660E00B5C125 /* AgentCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentCardComponent.swift; sourceTree = "<group>"; };
 		49A3BC4A2A1F75A000B5C125 /* AgentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDetailView.swift; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 			children = (
 				49C81A5D2C36FBE900D07C85 /* AgentImagesLoadingState.swift */,
 				49977F2C2A1E001E00AC2CE0 /* ContentView.swift */,
+				49A122242C527E1500496271 /* CustomConnectionErrorView.swift */,
 				49CF65572A31DF4A0043240E /* CustomProgressView.swift */,
 				49CF65552A31DE830043240E /* ErrorText.swift */,
 				499201DF2C32D02F007588CA /* GradientBackgroundView.swift */,
@@ -187,6 +196,7 @@
 				49D557182AA9FA5900C9C6A2 /* SectionLogoView.swift */,
 				49D557142AA9E4E400C9C6A2 /* SectionTitleView.swift */,
 				49D557162AA9E89E00C9C6A2 /* SectionTotalView.swift */,
+				49A122212C50E42100496271 /* SectionEndList.swift */,
 				49A122142C4E8D2500496271 /* SplashScreenView.swift */,
 				49E57E532A209C0B00B6F3DB /* Agents */,
 				49071D642A24FCFF001E172A /* Weapons */,
@@ -247,6 +257,7 @@
 				49D1D4492A1E6B80001100DA /* Models */,
 				49D1D44A2A1E6B8A001100DA /* Services */,
 				49977F2A2A1E001E00AC2CE0 /* ValorantAppApp.swift */,
+				49A1221C2C4EDBD300496271 /* introSova.mp4 */,
 				49A122162C4E960200496271 /* valorantSplash.mp4 */,
 				49977F2E2A1E001F00AC2CE0 /* Assets.xcassets */,
 				49977F302A1E001F00AC2CE0 /* Preview Content */,
@@ -354,9 +365,10 @@
 			children = (
 				49A3BC462A1F5ABA00B5C125 /* AgentsMainView.swift */,
 				49CF655D2A31E5A00043240E /* AgentsList.swift */,
-				49A3BC482A1F660E00B5C125 /* AgentCardComponent.swift */,
 				49C81A5F2C37EC3200D07C85 /* AgentSkeletonView.swift */,
+				49A3BC482A1F660E00B5C125 /* AgentCardComponent.swift */,
 				49C81A652C3C3CA600D07C85 /* AssignRoleColor.swift */,
+				49A1221E2C4EDCB800496271 /* AgentIntroView.swift */,
 				49CF65662A3220A50043240E /* Detail */,
 			);
 			path = Agents;
@@ -476,6 +488,7 @@
 				49977F322A1E001F00AC2CE0 /* Preview Assets.xcassets in Resources */,
 				49B558E72A27567A000FCF4A /* Localizable.strings in Resources */,
 				49A122172C4E960200496271 /* valorantSplash.mp4 in Resources */,
+				49A1221D2C4EDBD300496271 /* introSova.mp4 in Resources */,
 				49977F2F2A1E001F00AC2CE0 /* Assets.xcassets in Resources */,
 				4915A9F22A2886A40041178E /* valorantFont.ttf in Resources */,
 			);
@@ -507,6 +520,8 @@
 				49CF655E2A31E5A00043240E /* AgentsList.swift in Sources */,
 				49D557152AA9E4E400C9C6A2 /* SectionTitleView.swift in Sources */,
 				49CF65622A321CA00043240E /* AgentFullPortrait.swift in Sources */,
+				49A1221F2C4EDCB800496271 /* AgentIntroView.swift in Sources */,
+				49A122252C527E1500496271 /* CustomConnectionErrorView.swift in Sources */,
 				49B373CE2A33121900B2750D /* AgentAbilities.swift in Sources */,
 				49B373C62A33096700B2750D /* AgentName.swift in Sources */,
 				49E57E522A209BBA00B6F3DB /* Role.swift in Sources */,
@@ -542,6 +557,7 @@
 				49C81A602C37EC3200D07C85 /* AgentSkeletonView.swift in Sources */,
 				49B558E42A274D67000FCF4A /* WeaponDetailView.swift in Sources */,
 				495CB6E62A403D5200E1CE87 /* WeaponShopData.swift in Sources */,
+				49A122222C50E42100496271 /* SectionEndList.swift in Sources */,
 				4981D3672A2DD27100D63AD4 /* WeaponStats.swift in Sources */,
 				49B558EC2A2793D3000FCF4A /* UserData.swift in Sources */,
 				49977F2B2A1E001E00AC2CE0 /* ValorantAppApp.swift in Sources */,
@@ -725,6 +741,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ValorantApp/Preview Content\"";
+				DEVELOPMENT_TEAM = UR3R974XYA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ValorantApp/Info.plist;
@@ -754,6 +771,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ValorantApp/Preview Content\"";
+				DEVELOPMENT_TEAM = UR3R974XYA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ValorantApp/Info.plist;

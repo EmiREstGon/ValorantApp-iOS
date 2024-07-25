@@ -33,11 +33,10 @@ struct AgentsMainView: View {
                             ErrorText()
                         }
                     }
-                    AgentsList()    // Success
+                    AgentsListView()    // Success
                 }
             }
             .background(GradientBackgroundView())
-            .padding(.bottom, 74)
             .ignoresSafeArea(edges: .bottom)
         }
     }

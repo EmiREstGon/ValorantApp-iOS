@@ -38,7 +38,7 @@ struct WeaponsMainView: View {
                 }
             }
             .background(GradientBackgroundView(primaryColor: Color("darkBlue"), secondaryColor: Color("lightRed")))
-            .padding(.bottom, 74)
+//            .padding(.bottom, 74)
             .ignoresSafeArea(edges: .bottom)
         }
     }

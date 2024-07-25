@@ -37,3 +37,9 @@
 
 // URL
 "ValorantURL" = "https://playvalorant.com/en-us/";
+
+// Error
+"ConnectionErrorTitle" = "Connection Error";
+"ConnectionErrorDescriptionLine1" = "Unable to connect to Valorant API service";
+"ConnectionErrorDescriptionLine2" = "Please check your internet connection and try again";
+"RetryButton" = "Retry";

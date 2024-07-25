@@ -6,69 +6,98 @@
 //
 
 import SwiftUI
+import Network
 
-struct AgentsList: View {
-    
-    // MARK: Variables
+struct AgentsListView: View {
     @State private var agents: [Agent] = []
     @State private var isLoading = false
     @State private var hasError = false
     private let valorantService = ValorantService()
-    private let skeletonImages = ["skeletonGekkoIcon", "skeletonFadeIcon", "skeletonBreachIcon", "skeletonDeadlockIcon"]
     private var totalAgents: Int {
         agents.count
     }
     
-    // MARK: Get all Agents info to agents: [Agent]
+    private let skeletonImages = ["skeletonGekkoIcon", "skeletonFadeIcon", "skeletonBreachIcon", "skeletonDeadlockIcon"]
+    
     func getAllAgents() {
-        isLoading = true
-        
-        valorantService.getAllAgents() { result in
+        checkInternetConnection { isConnected in
             DispatchQueue.main.async {
-                isLoading = false
-                
-                switch result {
-                    case .success(let agents):
-                        self.agents = agents
-                    case .failure(let error):
-                    hasError = true
-                    print(error.localizedDescription)
+                if isConnected {
+                    self.isLoading = true
+                    
+                    self.valorantService.getAllAgents() { result in
+                        DispatchQueue.main.async {
+                            switch result {
+                            case .success(let agents):
+                                self.isLoading = false
+                                self.agents = agents
+                            case .failure(let error):
+                                self.isLoading = false
+                                self.hasError = true
+                                print(error.localizedDescription)
+                            }
+                        }
+                    }
+                } else {
+                    self.hasError = true
                 }
             }
         }
     }
     
+    func checkInternetConnection(completion: @escaping (Bool) -> Void) {
+        let monitor = NWPathMonitor()
+        let queue = DispatchQueue(label: "InternetConnectionMonitor")
+        
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                completion(true)
+            } else {
+                completion(false)
+            }
+            monitor.cancel()
+        }
+        
+        monitor.start(queue: queue)
+    }
+    
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: -12) {
-                SectionTitleView(title: "AgentsTitle")
-                
-                if isLoading {
-                    ForEach(0..<skeletonImages.count, id: \.self) { index in
-                        AgentSkeletonView(imageName: skeletonImages[index])
-                    }
-                } else {
-                    ForEach($agents, id: \.uuid) { agent in
-                        AgentCardComponentView(agent: agent)
+        ZStack {
+            ScrollView {
+                LazyVStack(spacing: -12) {
+                    SectionTitleView(title: "AgentsTitle")
+                    
+                    if isLoading {
+                        ForEach(0..<skeletonImages.count, id: \.self) { index in
+                            AgentSkeletonView(imageName: skeletonImages[index])
+                        }
+                    } else {
+                        ForEach($agents, id: \.uuid) { agent in
+                            AgentCardComponentView(agent: agent)
+                        }
+                        
+                        SectionEndListView(totalAgents: totalAgents)
                     }
                 }
-                
-                SectionTotalView(title: "TotalAgentsSubtitle", total: totalAgents)
-                
-                SectionLogoView()
+                .padding(.bottom, 100)
+                .scrollIndicators(.hidden)
+                .onAppear() {
+                    if agents.isEmpty {
+                        getAllAgents()
+                    }
+                }
             }
-        }
-        .scrollIndicators(.hidden)
-        .onAppear() {
-            if agents.isEmpty {
-                getAllAgents()
+            
+            if hasError {
+                CustomConnectionErrorView(isPresented: $hasError, retryAction: getAllAgents, totalAgents: totalAgents)
+                    .zIndex(1)
             }
         }
     }
 }
 
-//struct AgentsList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AgentsList()
-//    }
-//}
+struct AgentsListView_Previews: PreviewProvider {
+    static var previews: some View {
+        AgentsListView()
+    }
+}

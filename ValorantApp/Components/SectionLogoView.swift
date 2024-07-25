@@ -17,7 +17,7 @@ struct SectionLogoView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 50, height: 50)
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 18)
             }
         }
     }
@@ -26,5 +26,6 @@ struct SectionLogoView: View {
 struct SectionLogoView_Previews: PreviewProvider {
     static var previews: some View {
         SectionLogoView()
+            .preferredColorScheme(.dark)
     }
 }

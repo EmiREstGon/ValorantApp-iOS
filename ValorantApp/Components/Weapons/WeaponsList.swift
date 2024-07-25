@@ -50,6 +50,7 @@ struct WeaponsList: View {
                 
                 SectionLogoView()
             }
+            .padding(.bottom, 74)
         }
         .scrollIndicators(.hidden)
         .onAppear() {

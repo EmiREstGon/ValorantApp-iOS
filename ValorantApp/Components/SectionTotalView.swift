@@ -20,7 +20,7 @@ struct SectionTotalView: View {
         .font(.custom("VALORANT", size: 20))
         .fontWeight(.semibold)
         .foregroundColor(.white)
-        .padding(.vertical, 20)
+        .padding(.top, 20)
     }
 }
 
