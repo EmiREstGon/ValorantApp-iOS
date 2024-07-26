@@ -27,12 +27,12 @@ struct AgentsListView: View {
                     
                     self.valorantService.getAllAgents() { result in
                         DispatchQueue.main.async {
+                            self.isLoading = false
+                            
                             switch result {
                             case .success(let agents):
-                                self.isLoading = false
                                 self.agents = agents
                             case .failure(let error):
-                                self.isLoading = false
                                 self.hasError = true
                                 print(error.localizedDescription)
                             }
@@ -80,12 +80,14 @@ struct AgentsListView: View {
                     }
                 }
                 .padding(.bottom, 100)
-                .scrollIndicators(.hidden)
-                .onAppear() {
-                    if agents.isEmpty {
-                        getAllAgents()
-                    }
-                }
+            }
+            .scrollIndicators(.hidden)
+            .onAppear {
+                getAllAgents()
+            }
+            .refreshable {
+                agents.removeAll()
+                getAllAgents()
             }
             
             if hasError {

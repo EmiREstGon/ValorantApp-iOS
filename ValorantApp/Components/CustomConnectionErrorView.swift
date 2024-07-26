@@ -23,7 +23,9 @@ struct CustomConnectionErrorView: View {
     }
     
     var body: some View {
-        VStack {
+        ZStack {
+            Color.black.opacity(0.5).edgesIgnoringSafeArea(.all)
+            
             Spacer()
             
             VStack {
@@ -63,14 +65,12 @@ struct CustomConnectionErrorView: View {
                         .foregroundColor(.white)
                 }
             }
+            .frame(width: 300)
             .background(Color.white.opacity(0.75))
             .cornerRadius(20)
             .shadow(radius: 20)
-            .padding()
-            .padding(.horizontal, 25)
             
             Spacer()
         }
-        .background(Color.black.opacity(0.5).edgesIgnoringSafeArea(.all))
     }
 }
