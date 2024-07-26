@@ -22,26 +22,55 @@ struct AgentsListView: View {
     func getAllAgents() {
         checkInternetConnection { isConnected in
             DispatchQueue.main.async {
-                if isConnected {
+                guard isConnected else {
+                    self.hasError = true
+                    return
+                }
+                
+                if self.agents.isEmpty {
                     self.isLoading = true
-                    
-                    self.valorantService.getAllAgents() { result in
-                        DispatchQueue.main.async {
+                }
+                
+                self.valorantService.getAllAgents() { result in
+                    DispatchQueue.main.async {
+                        switch result {
+                        case .success(let getAgents):
+                            self.updateAgentsIfNeeded(with: getAgents)
+                        case .failure(let error):
+                            self.hasError = true
+                            print(error.localizedDescription)
+                        }
+                        
+                        if self.isLoading {
                             self.isLoading = false
-                            
-                            switch result {
-                            case .success(let agents):
-                                self.agents = agents
-                            case .failure(let error):
-                                self.hasError = true
-                                print(error.localizedDescription)
-                            }
                         }
                     }
-                } else {
-                    self.hasError = true
                 }
             }
+        }
+    }
+    
+    func updateAgentsIfNeeded(with newAgents: [Agent]) {
+        let cachedAgents = loadCachedAgents()
+        
+        if cachedAgents.count != newAgents.count {
+            self.agents = newAgents
+            saveAgentsToCache(newAgents)
+        }
+    }
+    
+    func loadCachedAgents() -> [Agent] {
+        if let data = UserDefaults.standard.data(forKey: "cachedAgents"),
+           let cachedAgents = try? JSONDecoder().decode([Agent].self, from: data) {
+            return cachedAgents
+        }
+        
+        return []
+    }
+    
+    func saveAgentsToCache(_ agents: [Agent]) {
+        if let data = try? JSONEncoder().encode(agents) {
+            UserDefaults.standard.set(data, forKey: "cachedAgents")
         }
     }
     
@@ -82,11 +111,13 @@ struct AgentsListView: View {
                 .padding(.bottom, 100)
             }
             .scrollIndicators(.hidden)
-            .onAppear {
-                getAllAgents()
+            .onAppear() {
+                if agents.isEmpty {
+                    self.agents = loadCachedAgents()
+                    getAllAgents()
+                }
             }
             .refreshable {
-                agents.removeAll()
                 getAllAgents()
             }
             
