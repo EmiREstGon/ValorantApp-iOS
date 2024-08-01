@@ -53,6 +53,10 @@ struct AgentsListView: View {
     func updateAgentsIfNeeded(with newAgents: [Agent]) {
         let cachedAgents = loadCachedAgents()
         
+        if self.agents.isEmpty {
+            self.agents = newAgents
+        }
+        
         if cachedAgents.count != newAgents.count {
             self.agents = newAgents
             saveAgentsToCache(newAgents)
